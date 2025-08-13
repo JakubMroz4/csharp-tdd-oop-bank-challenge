@@ -8,6 +8,6 @@ namespace Boolean.CSharp.Main.Interfaces
 {
     public interface IPrinter
     {
-        public void Print();
+        public void Print(string msg);
     }
 }

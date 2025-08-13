@@ -75,7 +75,7 @@ namespace Boolean.CSharp.Main.Implementations
 
         public void RequestOverdraftLimit(decimal overdraftLimit)
         {
-            if (_overdraftLimit >= 0)
+            if (overdraftLimit >= 0)
                 return;
 
             var request = new OverdraftRequest(AccountNumber, overdraftLimit);

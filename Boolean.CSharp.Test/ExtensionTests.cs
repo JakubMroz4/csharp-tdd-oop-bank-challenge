@@ -44,10 +44,10 @@ namespace Boolean.CSharp.Test
 
             currentAccount.RequestOverdraftLimit(-500m);
             var request = OverdraftRequests.GetRequest(currentAccount.AccountNumber);
+
+            if (request is null)
+                Console.WriteLine("request null");
             request.Accept();
-
-            Console.WriteLine(currentAccount.OverdraftLimit);
-
 
             var date = DateTime.Parse("Jan 1, 2009");
             var transaction = new BankTransaction(-100m, date);

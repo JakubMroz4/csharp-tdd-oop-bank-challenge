@@ -22,7 +22,7 @@ namespace Boolean.CSharp.Main
 
         public void Print(IPrinter printer)
         {
-            printer.Print(); //TODO
+            printer.Print(ToString()); //TODO
         }
 
         public override string ToString()
