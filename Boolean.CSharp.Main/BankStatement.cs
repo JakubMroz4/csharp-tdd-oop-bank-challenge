@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,20 +43,20 @@ namespace Boolean.CSharp.Main
             foreach (ITransaction transaction in _transactions) 
             { 
                 var date = transaction.Date.ToString("yyyy-MM-dd");
-                var value = transaction.Value.ToString("F2");
+                var value = transaction.Value.ToString("F2", CultureInfo.InvariantCulture);
                 balance += transaction.Value;
 
                 string line = "";
 
                 if (transaction.Type == Enums.TransactionTypeEnum.Credit)
                 {
-                    line = $"{date} || {value} ||         || {balance.ToString("F2")}";
+                    line = $"{date} || {value} ||         || {balance.ToString("F2", CultureInfo.InvariantCulture)}";
                     transactionStrings.Push(line);
                 }
 
                 if (transaction.Type == Enums.TransactionTypeEnum.Debit)
                 {
-                    line = $"{date} ||         || {value} || {balance.ToString("F2")}";
+                    line = $"{date} ||         || {value} || {balance.ToString("F2", CultureInfo.InvariantCulture)}";
                     transactionStrings.Push(line);
                 }                
             }

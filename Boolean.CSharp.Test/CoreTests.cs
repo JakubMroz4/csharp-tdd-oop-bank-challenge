@@ -152,9 +152,9 @@ namespace Boolean.CSharp.Test
             var statement = currentAccount.GetStatement();
 
             string expected = "date       || credit  ||  debit  || balance\r\n" +
-                "2012-01-14 ||         || -500,00 || 2500,00\r\n" +
-                "2012-01-13 || 2000,00 ||         || 3000,00\r\n" +
-                "2012-01-10 || 1000,00 ||         || 1000,00\r\n";
+                "2012-01-14 ||         || -500.00 || 2500.00\r\n" +
+                "2012-01-13 || 2000.00 ||         || 3000.00\r\n" +
+                "2012-01-10 || 1000.00 ||         || 1000.00\r\n";
 
             var statementString = statement.ToString();
 
@@ -185,9 +185,9 @@ namespace Boolean.CSharp.Test
             var statement = currentAccount.GetStatement();
 
             string expected = "date       || credit  ||  debit  || balance\r\n" +
-                "2012-01-14 ||         || -500,00 || 2500,00\r\n" +
-                "2012-01-13 || 2000,00 ||         || 3000,00\r\n" +
-                "2012-01-10 || 1000,00 ||         || 1000,00\r\n";
+                "2012-01-14 ||         || -500.00 || 2500.00\r\n" +
+                "2012-01-13 || 2000.00 ||         || 3000.00\r\n" +
+                "2012-01-10 || 1000.00 ||         || 1000.00\r\n";
 
             var statementString = statement.ToString();
 
